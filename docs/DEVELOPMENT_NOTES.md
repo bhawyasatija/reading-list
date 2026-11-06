@@ -42,7 +42,8 @@ case-insensitivity is ASCII-only (P20), the rare simultaneous-duplicate 500, and
 - [ ] When you're happy with the new location, drag `~/Desktop/paas/project setup (old copy - moved to Developer)`
   to the Bin yourself. The assistant renamed it but didn't delete it.
 - [ ] Phase 10: interactive technical assessment.
-- [ ] Commit the work to git (nothing has been committed yet).
+- [x] Committed and pushed to the private GitHub repository
+  [bhawyasatija/reading-list](https://github.com/bhawyasatija/reading-list) (branch `main`).
 
 Frontend unit tests (Vitest) were offered in Phase 7 and **declined for now** (D52). They are listed under
 README *Future improvements*.
@@ -150,6 +151,23 @@ README *Future improvements*.
 ---
 
 ## Phase log
+
+### Published to GitHub
+
+**Before committing,** all 86 files were reviewed:
+- There are no real `.env` files; only the two `.env.example` templates are included.
+- `db.sqlite3`, `venv/`, `node_modules/`, `.claude/` and the ChatGPT briefing are all git-ignored.
+- A secret scan found no real key and no token-like strings. The largest file is the 68 KB codebase guide.
+
+**The commit:** a single initial commit, `9f3f405`, authored by Bhawya, with **no co-author or tool
+attribution lines**, at the developer's request.
+
+**On GitHub:** the private repository `bhawyasatija/reading-list` was created with `gh repo create
+--private --source=. --push`. A check against GitHub's API confirmed:
+- the remote `main` is identical to the local commit, and `main` tracks `origin/main`
+- the visibility is PRIVATE
+- there are 86 files, the only `.env*` files are the examples, and there is no database, venv or node_modules
+- the commit has the correct author and no attribution lines
 
 ### Walkthrough condensed + ChatGPT briefing
 
