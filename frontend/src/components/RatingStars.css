@@ -1,0 +1,9 @@
+.rating-stars {
+  color: #c48a00;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.rating-stars__empty {
+  color: var(--color-border);
+}

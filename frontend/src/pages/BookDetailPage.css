@@ -1,0 +1,58 @@
+.book-detail {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* The page header already has a bottom margin; the flex gap replaces it here. */
+.book-detail .page-header {
+  margin-bottom: 0;
+}
+
+.book-detail .back-link {
+  margin-bottom: 0;
+}
+
+.book-detail__actions {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.book-detail__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  gap: var(--space-4);
+  margin: 0;
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.book-detail__facts dt {
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.book-detail__facts dd {
+  margin: var(--space-1) 0 0;
+}
+
+.book-detail__notes h2 {
+  margin-bottom: var(--space-2);
+  font-size: 1.125rem;
+}
+
+/* Keep the line breaks the user typed in their notes. */
+.book-detail__notes p {
+  white-space: pre-wrap;
+}
+
+.book-detail__muted {
+  color: var(--color-text-muted);
+}
+
+.book-detail__timestamps {
+  font-size: 0.875rem;
+}

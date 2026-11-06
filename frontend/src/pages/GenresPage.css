@@ -1,0 +1,30 @@
+.genres-page {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.genres-page .page-header {
+  margin-bottom: 0;
+}
+
+.genres-page__panel {
+  padding: var(--space-4);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+}
+
+.genres-page__panel-title {
+  margin-bottom: var(--space-3);
+  font-size: 1rem;
+}
+
+.genres-page__list {
+  margin: 0;
+  padding: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  list-style: none;
+}

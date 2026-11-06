@@ -1,0 +1,30 @@
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-8) 0;
+  color: var(--color-text-muted);
+}
+
+.loading-spinner__circle {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid var(--color-border);
+  border-top-color: var(--color-primary);
+  border-radius: 50%;
+  animation: loading-spinner-rotate 0.8s linear infinite;
+}
+
+@keyframes loading-spinner-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Respect the operating system's "reduce motion" accessibility setting. */
+@media (prefers-reduced-motion: reduce) {
+  .loading-spinner__circle {
+    animation: none;
+  }
+}

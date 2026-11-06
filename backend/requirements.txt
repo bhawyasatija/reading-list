@@ -1,0 +1,14 @@
+# Backend dependencies, pinned to exact versions so every developer installs
+# the same thing. Regenerate after adding a package with:
+#     pip freeze > requirements.txt
+# (then restore these comments).
+
+# --- Direct dependencies (installed on purpose) ---
+Django==5.2.19                # Web framework, ORM, admin. 5.2 is the LTS line (supported to April 2028).
+djangorestframework==3.18.3   # Serializers, ViewSets, routers, browsable API.
+django-cors-headers==4.9.0    # Lets the React dev server (another origin) call the API.
+python-dotenv==1.2.4          # Loads backend/.env into environment variables.
+
+# --- Transitive dependencies (required by Django) ---
+asgiref==3.13.0
+sqlparse==0.6.1

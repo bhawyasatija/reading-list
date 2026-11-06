@@ -1,0 +1,27 @@
+.genre-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.genre-form__fields {
+  display: grid;
+  grid-template-columns: minmax(10rem, 1fr) minmax(12rem, 2fr);
+  gap: var(--space-3);
+}
+
+@media (max-width: 600px) {
+  .genre-form__fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+.genre-form__error {
+  color: var(--color-danger);
+  font-size: 0.875rem;
+}
+
+.genre-form__actions {
+  display: flex;
+  gap: var(--space-2);
+}

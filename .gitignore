@@ -1,0 +1,46 @@
+# ---------------------------------------------------------------
+# Root .gitignore for the Reading List project.
+# One file covers both backend/ and frontend/ so the rules live in
+# a single place. Patterns without a leading "/" match at any depth.
+# ---------------------------------------------------------------
+
+# --- Secrets and environment-specific configuration -------------
+# Real values live in .env files that are never committed.
+# The *.example files document which variables exist, so keep those.
+.env
+.env.*
+!.env.example
+
+# --- Python / Django --------------------------------------------
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+# SQLite database: each developer creates their own with `migrate`.
+db.sqlite3
+db.sqlite3-journal
+# Output of `collectstatic` and user-uploaded files.
+staticfiles/
+media/
+# Test and coverage output.
+.coverage
+htmlcov/
+.pytest_cache/
+
+# --- Node / React / Vite ----------------------------------------
+node_modules/
+dist/
+*.local
+npm-debug.log*
+
+# --- Operating system and editor files --------------------------
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# --- AI assistant tooling (local to one machine, not project code)
+.claude/
+# Generated snapshot of the docs + source for pasting into ChatGPT; it would
+# go stale in git because it duplicates the real files.
+PROJECT_BRIEFING_FOR_CHATGPT.md

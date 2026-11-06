@@ -1,0 +1,40 @@
+.status-badge {
+  display: inline-block;
+  padding: 0.125rem var(--space-2);
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.status-badge--want_to_read {
+  background: #e7e4f6;
+  color: #45398a;
+}
+
+.status-badge--reading {
+  background: #fdf0d5;
+  color: #7a5200;
+}
+
+.status-badge--finished {
+  background: #dcefe6;
+  color: #22573f;
+}
+
+@media (prefers-color-scheme: dark) {
+  .status-badge--want_to_read {
+    background: #2e2a48;
+    color: #c9c1f5;
+  }
+
+  .status-badge--reading {
+    background: #3d3018;
+    color: #f2cf86;
+  }
+
+  .status-badge--finished {
+    background: #1f3a2e;
+    color: #9fd8bd;
+  }
+}

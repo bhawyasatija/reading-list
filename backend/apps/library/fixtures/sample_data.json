@@ -1,0 +1,113 @@
+[
+  {
+    "model": "library.genre",
+    "pk": 1,
+    "fields": {
+      "name": "Fantasy",
+      "description": "Magic, other worlds, and quests.",
+      "created_at": "2026-01-10T09:00:00Z"
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 2,
+    "fields": {
+      "name": "Science Fiction",
+      "description": "Speculative stories about science, technology, and the future.",
+      "created_at": "2026-01-10T09:00:00Z"
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 3,
+    "fields": {
+      "name": "Software Engineering",
+      "description": "Books about building and maintaining software.",
+      "created_at": "2026-01-10T09:00:00Z"
+    }
+  },
+  {
+    "model": "library.genre",
+    "pk": 4,
+    "fields": {
+      "name": "History",
+      "description": "",
+      "created_at": "2026-01-10T09:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 1,
+    "fields": {
+      "title": "The Hobbit",
+      "author": "J. R. R. Tolkien",
+      "genre": 1,
+      "status": "finished",
+      "rating": 5,
+      "finished_on": "2026-03-14",
+      "notes": "Re-read before starting The Lord of the Rings.",
+      "created_at": "2026-02-01T10:00:00Z",
+      "updated_at": "2026-03-14T20:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 2,
+    "fields": {
+      "title": "Dune",
+      "author": "Frank Herbert",
+      "genre": 2,
+      "status": "reading",
+      "rating": null,
+      "finished_on": null,
+      "notes": "",
+      "created_at": "2026-04-02T10:00:00Z",
+      "updated_at": "2026-10-20T18:30:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 3,
+    "fields": {
+      "title": "The Pragmatic Programmer",
+      "author": "David Thomas and Andrew Hunt",
+      "genre": 3,
+      "status": "finished",
+      "rating": 4,
+      "finished_on": "2026-06-30",
+      "notes": "Good chapters on tracer bullets and orthogonality.",
+      "created_at": "2026-05-12T10:00:00Z",
+      "updated_at": "2026-06-30T21:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 4,
+    "fields": {
+      "title": "Designing Data-Intensive Applications",
+      "author": "Martin Kleppmann",
+      "genre": 3,
+      "status": "want_to_read",
+      "rating": null,
+      "finished_on": null,
+      "notes": "Recommended for understanding databases in depth.",
+      "created_at": "2026-09-05T10:00:00Z",
+      "updated_at": "2026-09-05T10:00:00Z"
+    }
+  },
+  {
+    "model": "library.book",
+    "pk": 5,
+    "fields": {
+      "title": "The Left Hand of Darkness",
+      "author": "Ursula K. Le Guin",
+      "genre": 2,
+      "status": "want_to_read",
+      "rating": null,
+      "finished_on": null,
+      "notes": "",
+      "created_at": "2026-10-01T10:00:00Z",
+      "updated_at": "2026-10-01T10:00:00Z"
+    }
+  }
+]
