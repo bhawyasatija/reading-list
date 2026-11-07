@@ -42,7 +42,7 @@ case-insensitivity is ASCII-only (P20), the rare simultaneous-duplicate 500, and
 - [ ] When you're happy with the new location, drag `~/Desktop/paas/project setup (old copy - moved to Developer)`
   to the Bin yourself. The assistant renamed it but didn't delete it.
 - [ ] Phase 10: interactive technical assessment.
-- [x] Committed and pushed to the private GitHub repository
+- [x] Committed and pushed to the **public** GitHub repository
   [bhawyasatija/reading-list](https://github.com/bhawyasatija/reading-list) (branch `main`).
 
 Frontend unit tests (Vitest) were offered in Phase 7 and **declined for now** (D52). They are listed under
@@ -151,6 +151,27 @@ README *Future improvements*.
 ---
 
 ## Phase log
+
+### Made public, with README screenshots
+
+**Re-verified from GitHub first:** a fresh `gh repo clone` followed the README Quick start. It installed,
+migrated and loaded the sample data; `check` was clean; **57/57 tests** passed; lint showed 0 warnings;
+the build succeeded; and the launcher kept its executable permission.
+
+**README:**
+- added two screenshots (`docs/screenshots/`): the book list, and the add-book form showing validation
+  messages. They were taken from the running app.
+- added a **Highlights** section and a stack summary at the top.
+
+**Repository:**
+- switched to **public** and added the topics django, django-rest-framework, react, vite, full-stack,
+  rest-api, sqlite, python and javascript.
+- checked anonymously: the API reports `private: false`; the README and both images are served;
+  `backend/.env` returns 404; and the GitHub page renders the README with both images loaded.
+
+**Attribution check:** across all commits there are no `Co-Authored-By`, Claude or Anthropic lines, and
+the author and committer are Bhawya throughout. Files contain no attribution lines. The only
+AI-tool mentions are factual log entries in this file and the `.claude/` entry in `.gitignore`.
 
 ### Published to GitHub
 
