@@ -3,14 +3,24 @@
 A small full-stack web application for tracking books you want to read, are reading,
 or have finished. Built with a **Django REST Framework** API and a **React (Vite)** frontend.
 
-> **Project status:** the application is complete, tested and documented.
-> - **Features:** full CRUD for books and genres, filters, and validation in the browser and on the server.
-> - **Tests:** 57 backend tests with 95% line coverage, plus manual browser checks.
-> - **Setup instructions:** confirmed by setting up a clean copy from scratch.
-> - **New to the code?** Start with [docs/CODEBASE_GUIDE.md](docs/CODEBASE_GUIDE.md). It covers the
->   architecture, every file, one feature traced end to end, and modification exercises.
->
-> See [docs/DEVELOPMENT_NOTES.md](docs/DEVELOPMENT_NOTES.md) for the detailed log.
+![The book list: cards showing each book's title, author, genre, reading status and star rating, with status and genre filters above](docs/screenshots/book-list.jpg)
+
+## Highlights
+
+- **Full CRUD** for books and genres. Filters are stored in the URL, so a filtered list can be bookmarked.
+- **Validation in two places:**
+  - in the browser, for instant feedback with no request sent
+  - on the server, where it's authoritative, with messages shown under the matching field
+- **Data integrity in the database itself.** Genre names are unique ignoring case, a rating is only
+  allowed on finished books, and a genre that books still use can't be deleted (the API returns 409).
+- **Clean layering.** On the frontend, pages fetch data and components only render. On the backend, a
+  ViewSet hands over to a serializer, which hands over to the ORM.
+- **57 backend tests** with 95% line coverage, including tests that prove the database constraints work.
+- **One-click start on macOS** with `Start Reading List.command`.
+
+| Server-side rules mirrored in the browser | Tech stack |
+| --- | --- |
+| ![The add-book form after an empty submit: each required field is outlined in red with its own message, and a summary says "Please correct the highlighted fields."](docs/screenshots/add-book-validation.jpg) | **Backend:** Python 3.11, Django 5.2 LTS, Django REST Framework 3.18, SQLite<br>**Frontend:** React 19, Vite 8, React Router 8, Axios, plain CSS<br>**Quality:** Django test runner (57 tests), oxlint, a manual browser checklist<br><br>**New to the code?** Start with [docs/CODEBASE_GUIDE.md](docs/CODEBASE_GUIDE.md).<br>**Design decisions:** [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).<br>**Full history:** [docs/DEVELOPMENT_NOTES.md](docs/DEVELOPMENT_NOTES.md). |
 
 ---
 
@@ -196,6 +206,7 @@ project setup/
 │   ├── .env.example           # Template for frontend environment variables
 │   └── README.md              # Frontend-specific setup and reference
 ├── docs/
+│   ├── screenshots/           # Images used in this README
 │   ├── CODEBASE_GUIDE.md      # Onboarding walkthrough + modification exercises (start here)
 │   ├── ARCHITECTURE.md        # How the system is designed and why
 │   └── DEVELOPMENT_NOTES.md   # Running log: decisions, problems, status
